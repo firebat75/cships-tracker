@@ -1,12 +1,52 @@
+header {
+    display: flex;
+    width: 100%;
+}
+
+#connection {
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    display: flex;
+}
+
 body {
     margin: 0;
-    padding: 30px;
     background-color: #f2cba7;
     min-width: 400px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-weight: 1000;
     color: #e25e51;
+    padding: 10px;
+}
+
+#status {
+    padding: 5px;
+}
+
+.green-dot {
+    height: 7px;
+    width: 7px;
+    background-color: rgb(0, 206, 86);
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.red-dot {
+    height: 7px;
+    width: 7px;
+    background-color: #e25e51;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3px;
+    margin-right: 3px;
 }
