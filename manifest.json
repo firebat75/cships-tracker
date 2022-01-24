@@ -12,6 +12,13 @@
         }
     },
     "permissions": [
-        "tabs"
+        "tabs",
+        "scripting",
+        "notifications",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "host_permissions": [
+        "https://play.cryptoships.club/ships"
     ]
 }
