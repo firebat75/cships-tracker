@@ -1,6 +1,7 @@
 const connection = document.getElementById("connection")
 const content = document.getElementById("main-content")
 
+
 let isCorrectPage = false
 
 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) { //Check if URL is correct, loads relevant information
@@ -18,11 +19,16 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) { //Che
 })
 
 
-function getHTML() {
-    var htmlCode = document.documentElement.outerHTML;
-    return htmlCode;
+async function getPageStuff() {  //returns [tab url, raw HTML]
+    const tabs = await chrome.tabs.query({ active: true, currentWindow: true })
+    const tab = tabs[0]
+    const scraped = await chrome.scripting.executeScript({
+        target: { tabId: tab.id }, function() {
+            var htmlCode = document.documentElement.outerHTML
+            return htmlCode
+        }
+    })
+    return [tab.url, scraped[0].result]
 }
 
-const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-const tab = tabs[0];
-const scraped = await chrome.scripting.executeScript({ target: { tabId: tab.id }, function: getHTML })
+const pageStuff = getPageStuff()

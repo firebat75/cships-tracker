@@ -14,9 +14,7 @@
     "permissions": [
         "tabs",
         "scripting",
-        "notifications",
-        "http://*/*",
-        "https://*/*"
+        "notifications"
     ],
     "host_permissions": [
         "https://play.cryptoships.club/ships"
