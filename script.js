@@ -31,7 +31,7 @@ async function getPageStuff() {  //returns [tab url, raw HTML]
     return [tab.url, scraped[0].result]
 }
 
-async function getter() {
+async function getter() { //stores pageURL and pageHTML in browser localStorage
     const result = await getPageStuff()
     localStorage.setItem("pageURL", result[0])
     localStorage.setItem("pageHTML", result[1])
