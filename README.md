@@ -1,4 +1,4 @@
-# cships-tracker
+# Crypto Ships Tracker Chrome addon
 
 A chrome addon to track your ships' data.
 
