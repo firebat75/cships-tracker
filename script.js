@@ -9,7 +9,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) { //Che
         isCorrectPage = true
         connection.innerHTML += "<p id='status'>Connected</p>"
         connection.innerHTML += "<span class='green-dot'></span>"
-        content.innerHTML += "<h2>You're in the right place!</h2>"
+        content.innerHTML += "<h2 style='border-top:50px;'>You're in the right place!</h2>"
     } else {
         isCorrectPage = false
         connection.innerHTML += "<p id='status'>Not Connected</p>"
